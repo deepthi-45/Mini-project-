@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tech For Girls Registration</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: #fdfdfd;
+      display: flex;
+      justify-content: center;
+      padding: 40px 10px;
+    }
+    .container {
+      max-width: 500px;
+      width: 100%;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 30px;
+      text-align: left;
+    }
+    h2 {
+      text-align: center;
+      font-weight: bold;
+      font-size: 24px;
+    }
+    .flower {
+      font-size: 22px;
+      color: #ff69b4;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 20px;
+      margin-bottom: 6px;
+    }
+    input[type="text"],
+    input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+    .whatsapp-share {
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      margin-top: 10px;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+    }
+    .click-count {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    .file-upload {
+      margin-top: 10px;
+    }
+    input[type="file"] {
+      width: 100%;
+      padding: 8px;
+    }
+    .submit-btn {
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 16px;
+      width: 100%;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Register for Tech For Girls <span class="flower">🌸</span></h2>
+    
+    <label>Name:</label>
+    <input type="text" name="name">
+
+    <label>Phone Number:</label>
+    <input type="text" name="phone">
+
+    <label>Email ID:</label>
+    <input type="email" name="email">
+
+    <label>College/Department:</label>
+    <input type="text" name="college">
+
+    <label>Click to Share on WhatsApp:</label>
+    <button class="whatsapp-share" onclick="incrementCounter()">📱 Share on WhatsApp</button>
+
+    <div class="click-count" id="clickCount">Click count: 0/5</div>
+
+    <label>Upload Screenshot:</label>
+    <div class="file-upload">
+      <input type="file">
+    </div>
+
+    <button class="submit-btn">Submit Registration</button>
+  </div>
+
+  <script>
+    let count = 0;
+    function incrementCounter() {
+      if (count < 5) {
+        count++;
+        document.getElementById('clickCount').innerText = `Click count: ${count}/5`;
+        // WhatsApp sharing logic can go here (for demo, only count increases)
+      } else {
+        alert("You have reached the max click limit (5)");
+      }
+    }
+  </script>
+</body>
+</html>
